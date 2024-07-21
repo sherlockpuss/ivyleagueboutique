@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dessert - The Ivy League Boutique</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Your custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="index.html">The Ivy League Boutique</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link" href="foodcourt.html">Food Court</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Beauty</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Clothes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Decor</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Entertainment</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Donations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Customer Service</a></li>
+                    <li class="nav-item"><a class="nav-link" href="order.html">Order</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Comment</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main class="container mt-5">
+        <h1 class="text-center">Dessert</h1>
+        <div class="text-center">
+            <h4>Cake</h4>
+            <img src="https://www.recipetineats.com/tachyon/2016/03/Baked-Cheesecake_6-1.jpg" alt="Cake" class="img-fluid">
+            <button id="order-button" class="btn btn-primary mt-3">Order</button>
+        </div>
+    </main>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const orderButton = document.getElementById('order-button');
+
+            orderButton.addEventListener('click', function () {
+                const item = {
+                    title: 'Cake',
+                    image: 'https://www.recipetineats.com/tachyon/2016/03/Baked-Cheesecake_6-1.jpg'
+                };
+
+                let orderItems = JSON.parse(localStorage.getItem('orderItems')) || [];
+                orderItems.push(item);
+                localStorage.setItem('orderItems', JSON.stringify(orderItems));
+
+                alert('Item added to order!');
+            });
+        });
+    </script>
+</body>
+</html>

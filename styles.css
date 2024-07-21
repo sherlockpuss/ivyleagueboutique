@@ -1,0 +1,90 @@
+body {
+    background-color: #f8c8dc; /* Baby pink background */
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    position: relative;
+}
+
+header {
+    padding: 20px;
+}
+
+h1 {
+    font-family: 'Brush Script MT', cursive; /* Calligraphy font */
+    font-size: 4em; /* Make the title bigger */
+    margin: 20px 0 0 0; /* Add margin to the top */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav li {
+    margin: 5px;
+}
+
+nav a {
+    background-color: #ffffff; /* White background for buttons */
+    color: #f8c8dc; /* Baby pink text */
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: #f8c8dc; /* Baby pink background on hover */
+    color: #ffffff; /* White text on hover */
+}
+
+body::before, body::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 10px;
+    height: 100%;
+    background: radial-gradient(circle, #ffffff 1px, transparent 1px);
+    background-size: 10px 10px;
+    top: 0;
+    bottom: 0;
+}
+
+body::before {
+    left: 0;
+}
+
+body::after {
+    right: 0;
+}
+
+section {
+    margin: 20px auto;
+    text-align: center;
+}
+
+.item {
+    margin: 20px;
+}
+
+.order-button {
+    display: inline-block;
+    background-color: #f8c8dc; /* Baby pink background */
+    color: #ffffff; /* White text */
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.order-button:hover {
+    background-color: #ffffff; /* White background on hover */
+    color: #f8c8dc; /* Baby pink text on hover */
+}
+
+
+
